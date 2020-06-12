@@ -15,6 +15,7 @@ module.exports = app => {
             .first()
             .then(user => done(null, user ? { ...payload } : false))
             .catch(err => done(err, false))
+            
     })
 
     passport.use(strategy)

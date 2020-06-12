@@ -1,5 +1,6 @@
 
 module.exports = app => {
+    app.api.get('/',app.api.user.test)
     app.post('/signup', app.api.user.save)
     app.post('/signin', app.api.auth.signin)
     app.post('/validateToken', app.api.auth.validateToken)
