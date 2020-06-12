@@ -10,8 +10,6 @@ module.exports = app => {
         return bcrypt.hashSync(password, salt)
     }
 
-    const test = console.log('Oi eu sou Goku')
-
     const save = async (req, res) => {
         const user = { ...req.body }
         if(req.params.id) user.id = req.params.id
@@ -109,6 +107,6 @@ module.exports = app => {
         }
     }
 
-    return { save, get, getById, remove,getNumber, test }
+    return { save, get, getById, remove,getNumber}
 }
 
