@@ -13,11 +13,10 @@ consign()
     .then('./config/middlewares.js')
     .then('./api/validation.js')
     .then('./api')
-    //.then('./schedule')
     .then('./config/routes.js')
     .into(app)
 
 
-app.listen( process.env.PORT || 80,'0.0.0.0' ,() => {
+app.listen( process.env.PORT || 3000,'0.0.0.0' ,() => {
     console.log('Backend executando')
 })
