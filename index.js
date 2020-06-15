@@ -24,5 +24,5 @@ app.get("/", (req,res) => {
 
 
 app.listen( process.env.PORT || 3000,'0.0.0.0' ,() => {
-    console.log('Backend executando')
+    console.log('Escutando na porta '+ process.env.PORT)
 })
