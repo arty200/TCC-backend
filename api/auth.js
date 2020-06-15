@@ -4,10 +4,6 @@ const bcrypt = require('bcrypt-nodejs')
 
 module.exports = app => {
 
-    const hello = (req,res) => {
-        return res.status(400).send('Conectado a /HOME ')
-    }
-
     const signin = async (req, res) => {
         if (!req.body.email || !req.body.password) {
             return res.status(400).send('Informe usuário e senha!')
@@ -54,5 +50,5 @@ module.exports = app => {
         res.send(false)
     }
 
-    return { signin, validateToken, hello }
+    return { signin, validateToken }
 }

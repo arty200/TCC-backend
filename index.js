@@ -17,6 +17,12 @@ consign()
     .into(app)
 
 
+app.get("/", (req,res) => {
+    console.log("Envinado resposta")
+    res.send("Oi, funcionou")
+})
+
+
 app.listen( process.env.PORT || 3000,'0.0.0.0' ,() => {
     console.log('Backend executando')
 })
