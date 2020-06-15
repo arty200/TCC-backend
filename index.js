@@ -1,6 +1,7 @@
 const app = require('express')()
 const consign = require('consign')
 const db = require('./config/db')
+var port = process.env.PORT || 3000
 //const mongoose = require('mongoose')
 
 //require('./config/mongodb')
@@ -23,6 +24,6 @@ app.get("/", (req,res) => {
 })
 
 
-app.listen( process.env.PORT || 3000,'0.0.0.0' ,() => {
-    console.log('Escutando na porta '+ process.env.PORT)
+app.listen( port ,() => {
+    console.log('Escutando na porta '+ port)
 })
