@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon",
+    "build": "node index.js",
     "production": "pm2 start index.js --name cadastro"
   },
   "keywords": [],
