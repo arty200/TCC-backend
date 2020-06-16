@@ -7,8 +7,8 @@ db = {
     client: 'postgresql',
     connection: {
       database: 'cadastro',
-      user:     'postgres',
-      password: '123456'
+      user:'postgres',
+      password:'123456'
     },
     pool: {
       min: 2,
@@ -16,6 +16,9 @@ db = {
     },
     migrations: {
       tableName: 'knex_migrations'
+    },
+    seeds: {
+      seedName: 'knex_seeds'
     }
   },
 
@@ -29,6 +32,9 @@ db = {
     migrations: {
       directory: './migrations'
     },
+    seeds: {
+      directory:'./seeds'
+    }
   }
 
 };
